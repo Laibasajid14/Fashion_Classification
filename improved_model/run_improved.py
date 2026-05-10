@@ -76,6 +76,12 @@ def main():
     class_weights = compute_class_weights(train_df)
     logger.info(f"Class weights (min={class_weights.min():.3f}, max={class_weights.max():.3f})")
 
+    # ── Subsample training set to keep epoch time ~10 min on T4 ──────────
+    SUBSET = 50000
+    if len(train_df) > SUBSET:
+        train_df = train_df.sample(n=SUBSET, random_state=42).reset_index(drop=True)
+        logger.info(f"Subsampled train set to {SUBSET} samples for speed")
+
     train_loader, val_loader, test_loader = build_dataloaders(
         train_df, val_df, test_df,
         image_size=cfg.IMAGE_SIZE,

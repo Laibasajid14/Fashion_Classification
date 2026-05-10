@@ -1,17 +1,41 @@
 """
 Dataset configuration for DeepFashion2 clothing classification.
-Adjust DATA_ROOT to point to your local or Kaggle dataset path.
+
+PATH NOTES
+----------
+The CSV files store image paths that were written when the dataset was first
+published on Kaggle under the slug:
+    /kaggle/input/deepfashion2-original-with-dataframes/...
+
+If you are using the dataset from a *different* Kaggle account/slug the mount
+point is different, e.g.:
+    /kaggle/input/datasets/thusharanair/deepfashion2-original-with-dataframes/...
+
+Set DATA_ROOT to wherever DeepFashion2/ sits on your machine, and set
+CSV_PATH_PREFIX to the prefix that is embedded inside the CSV path column.
+load_and_clean_df() will replace CSV_PATH_PREFIX → IMAGE_ROOT automatically,
+so stale paths in the CSV never cause a FileNotFoundError.
 """
 
-# ── Paths ──────────────────────────────────────────────────────────────────────
-DATA_ROOT = "/kaggle/input/deepfashion2-original-with-dataframes/DeepFashion2"
-IMAGE_ROOT = f"{DATA_ROOT}/deepfashion2_original_images"
+import os
+
+# ── Adjust these two lines to match your environment ──────────────────────────
+
+# Where the DeepFashion2 folder actually lives on disk:
+DATA_ROOT = "/kaggle/input/datasets/thusharanair/deepfashion2-original-with-dataframes/DeepFashion2"
+
+# The prefix that is baked into the 'path' column of the CSV files.
+# This is what the original Kaggle notebook wrote when it built the dataframes.
+# We strip this prefix and replace it with IMAGE_ROOT below.
+CSV_PATH_PREFIX = "/kaggle/input/deepfashion2-original-with-dataframes/DeepFashion2/deepfashion2_original_images"
+
+# ── Derived paths (do not edit) ───────────────────────────────────────────────
+IMAGE_ROOT     = f"{DATA_ROOT}/deepfashion2_original_images"
 DATAFRAME_ROOT = f"{DATA_ROOT}/img_info_dataframes"
 
-TRAIN_CSV   = f"{DATAFRAME_ROOT}/train.csv"
-VAL_CSV     = f"{DATAFRAME_ROOT}/validation.csv"
-# Test CSV has no annotations — used only for inference demo
-TEST_CSV    = f"{DATAFRAME_ROOT}/test.csv"
+TRAIN_CSV = f"{DATAFRAME_ROOT}/train.csv"
+VAL_CSV   = f"{DATAFRAME_ROOT}/validation.csv"
+TEST_CSV  = f"{DATAFRAME_ROOT}/test.csv"   # unlabelled — inference only
 
 # ── Classes ────────────────────────────────────────────────────────────────────
 # DeepFashion2 category IDs are 1-indexed

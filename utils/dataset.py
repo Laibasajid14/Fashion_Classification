@@ -29,10 +29,31 @@ from configs.dataset_config import (
     IMAGENET_MEAN, IMAGENET_STD, RANDOM_SEED, NUM_CLASSES,
     TRAIN_RATIO, VAL_RATIO, TEST_RATIO,
     BBOX_ASPECT_MIN, BBOX_ASPECT_MAX, CLASS_NAMES,
+    IMAGE_ROOT, CSV_PATH_PREFIX,
 )
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
+
+def remap_csv_paths(df):
+    """
+    Replace the stale path prefix baked into every DeepFashion2 CSV with the
+    actual IMAGE_ROOT for the current environment.
+
+    The CSV dataframes were built on a specific Kaggle slug and hardcode that
+    slug's mount path in the 'path' column.  This function fixes all rows in
+    one vectorised pass so the DataLoader never receives a wrong path.
+
+    Safe to call on any CSV that has a 'path' column — train, val, or test.
+    If the prefix is already correct (local setup where paths match) the
+    str.replace is a no-op.
+    """
+    if "path" in df.columns:
+        df["path"] = df["path"].str.replace(
+            CSV_PATH_PREFIX, IMAGE_ROOT, regex=False
+        )
+    return df
+
 
 def _parse_bbox(raw):
     """Parse b_box field '[x1, y1, x2, y2]' to (x1,y1,x2,y2) ints."""
@@ -56,6 +77,8 @@ def load_and_clean_df(csv_path, drop_extreme_bbox=True):
     Returns a DataFrame with columns: path, category_id, x1, y1, x2, y2.
     """
     df = pd.read_csv(csv_path)
+
+    df = remap_csv_paths(df)  # fix stale Kaggle slug paths baked into the CSV
 
     # Keep only columns we need
     needed = ["path", "category_id", "b_box"]

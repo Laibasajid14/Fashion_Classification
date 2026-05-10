@@ -73,15 +73,15 @@ AUGMENTATIONS = [
 # ── Hyperparameter search space (random search) ────────────────────────────────
 # Search over LR × dropout (3 values each = 9 combinations)
 HP_SEARCH = {
-    "learning_rate": [1e-4, 3e-4, 1e-3],
-    "dropout_rate":  [0.3, 0.5, 0.6],
-    "num_trials":    9,
-    "epochs_per_trial": 5,      # Short trials for search
+    "learning_rate":    [1e-4, 3e-4, 1e-3],
+    "dropout_rate":     [0.3, 0.5],
+    "num_trials":       6,        # was 9
+    "epochs_per_trial": 3,        # was 5  → ~1.5 hrs total
 }
 
 # ── Ablation study config ──────────────────────────────────────────────────────
 # Each ablation trains for fewer epochs to save compute
-ABLATION_EPOCHS = 10
+ABLATION_EPOCHS = 5               # was 10 → ~1.5 hrs total
 ABLATIONS = {
     "A_full_finetune":      {"freeze_backbone": False, "lr_scheduler": None,     "label_smoothing": 0.0, "use_mixup": False},
     "B_cosine_schedule":    {"freeze_backbone": False, "lr_scheduler": "cosine", "label_smoothing": 0.0, "use_mixup": False},
