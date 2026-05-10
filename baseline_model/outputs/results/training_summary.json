@@ -1,0 +1,7 @@
+{
+  "best_epoch": 13,
+  "best_val_f1": 0.3592452955878263,
+  "total_epochs": 18,
+  "total_time_min": 70.78,
+  "model": "resnet18_baseline"
+}

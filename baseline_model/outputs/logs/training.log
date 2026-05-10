@@ -1,0 +1,186 @@
+[2026-05-10 11:49:42] [baseline] [INFO]  Logger initialised → outputs/logs/training.log
+[2026-05-10 11:49:42] [baseline] [INFO]  Device: cuda
+[2026-05-10 11:49:42] [baseline] [INFO]  GPU: Tesla T4
+[2026-05-10 11:49:42] [baseline] [INFO]  Loading and cleaning dataset...
+[2026-05-10 11:50:34] [baseline] [INFO]  Combined annotations: 364582
+[2026-05-10 11:50:36] [baseline] [INFO]  Class weights (min=0.064, max=7.735)
+[2026-05-10 11:50:36] [baseline] [INFO]  Subsampled train set to 20000 samples for speed
+[2026-05-10 11:50:36] [baseline] [INFO]  Batches — Train: 313 | Val: 847 | Test: 847
+[2026-05-10 11:50:37] [baseline] [INFO]  Model: ResNet-18 Baseline
+  Total parameters:     11,183,181
+  Trainable parameters: 6,669
+  Frozen parameters:    11,176,512
+[2026-05-10 11:50:37] [baseline] [INFO]  ============================================================
+[2026-05-10 11:50:37] [baseline] [INFO]  Starting Baseline (ResNet-18) training
+[2026-05-10 11:50:37] [baseline] [INFO]  Epochs: 25 | LR: 0.001 | Batch: 64 | Device: cuda
+[2026-05-10 11:50:37] [baseline] [INFO]  ============================================================
+[2026-05-10 11:51:00] [baseline] [DEBUG]  Epoch 1 | Batch 50/313 | Loss: 2.5348
+[2026-05-10 11:51:19] [baseline] [DEBUG]  Epoch 1 | Batch 100/313 | Loss: 2.5996
+[2026-05-10 11:51:40] [baseline] [DEBUG]  Epoch 1 | Batch 150/313 | Loss: 2.3015
+[2026-05-10 11:51:59] [baseline] [DEBUG]  Epoch 1 | Batch 200/313 | Loss: 2.4905
+[2026-05-10 11:52:20] [baseline] [DEBUG]  Epoch 1 | Batch 250/313 | Loss: 2.4579
+[2026-05-10 11:52:40] [baseline] [DEBUG]  Epoch 1 | Batch 300/313 | Loss: 2.6693
+[2026-05-10 11:56:24] [baseline] [INFO]  Epoch   1/25 | Train Loss: 2.3943 Acc: 0.2731 F1: 0.1896 | Val Loss: 2.0223 Acc: 0.4505 F1: 0.3059 | Time: 347.0s
+[2026-05-10 11:56:24] [baseline] [INFO]    ✓ Best model saved (val_f1=0.3059)
+[2026-05-10 11:56:40] [baseline] [DEBUG]  Epoch 2 | Batch 50/313 | Loss: 1.8495
+[2026-05-10 11:56:55] [baseline] [DEBUG]  Epoch 2 | Batch 100/313 | Loss: 2.1020
+[2026-05-10 11:57:10] [baseline] [DEBUG]  Epoch 2 | Batch 150/313 | Loss: 2.2427
+[2026-05-10 11:57:25] [baseline] [DEBUG]  Epoch 2 | Batch 200/313 | Loss: 1.8111
+[2026-05-10 11:57:40] [baseline] [DEBUG]  Epoch 2 | Batch 250/313 | Loss: 2.0526
+[2026-05-10 11:57:55] [baseline] [DEBUG]  Epoch 2 | Batch 300/313 | Loss: 2.0245
+[2026-05-10 12:00:13] [baseline] [INFO]  Epoch   2/25 | Train Loss: 2.1408 Acc: 0.3449 F1: 0.2472 | Val Loss: 1.9252 Acc: 0.4047 F1: 0.2947 | Time: 229.1s
+[2026-05-10 12:00:29] [baseline] [DEBUG]  Epoch 3 | Batch 50/313 | Loss: 2.2090
+[2026-05-10 12:00:44] [baseline] [DEBUG]  Epoch 3 | Batch 100/313 | Loss: 1.9039
+[2026-05-10 12:00:59] [baseline] [DEBUG]  Epoch 3 | Batch 150/313 | Loss: 2.2552
+[2026-05-10 12:01:13] [baseline] [DEBUG]  Epoch 3 | Batch 200/313 | Loss: 2.1776
+[2026-05-10 12:01:28] [baseline] [DEBUG]  Epoch 3 | Batch 250/313 | Loss: 2.6607
+[2026-05-10 12:01:43] [baseline] [DEBUG]  Epoch 3 | Batch 300/313 | Loss: 2.0486
+[2026-05-10 12:04:02] [baseline] [INFO]  Epoch   3/25 | Train Loss: 2.0675 Acc: 0.3579 F1: 0.2634 | Val Loss: 1.8902 Acc: 0.4294 F1: 0.3228 | Time: 229.0s
+[2026-05-10 12:04:02] [baseline] [INFO]    ✓ Best model saved (val_f1=0.3228)
+[2026-05-10 12:04:18] [baseline] [DEBUG]  Epoch 4 | Batch 50/313 | Loss: 2.0851
+[2026-05-10 12:04:33] [baseline] [DEBUG]  Epoch 4 | Batch 100/313 | Loss: 2.1107
+[2026-05-10 12:04:49] [baseline] [DEBUG]  Epoch 4 | Batch 150/313 | Loss: 2.2015
+[2026-05-10 12:05:03] [baseline] [DEBUG]  Epoch 4 | Batch 200/313 | Loss: 2.3948
+[2026-05-10 12:05:18] [baseline] [DEBUG]  Epoch 4 | Batch 250/313 | Loss: 2.0434
+[2026-05-10 12:05:33] [baseline] [DEBUG]  Epoch 4 | Batch 300/313 | Loss: 1.5485
+[2026-05-10 12:07:54] [baseline] [INFO]  Epoch   4/25 | Train Loss: 2.0330 Acc: 0.3651 F1: 0.2687 | Val Loss: 1.9211 Acc: 0.3836 F1: 0.2837 | Time: 231.3s
+[2026-05-10 12:08:10] [baseline] [DEBUG]  Epoch 5 | Batch 50/313 | Loss: 2.0211
+[2026-05-10 12:08:25] [baseline] [DEBUG]  Epoch 5 | Batch 100/313 | Loss: 1.9278
+[2026-05-10 12:08:41] [baseline] [DEBUG]  Epoch 5 | Batch 150/313 | Loss: 2.5827
+[2026-05-10 12:08:55] [baseline] [DEBUG]  Epoch 5 | Batch 200/313 | Loss: 2.3869
+[2026-05-10 12:09:11] [baseline] [DEBUG]  Epoch 5 | Batch 250/313 | Loss: 2.1786
+[2026-05-10 12:09:26] [baseline] [DEBUG]  Epoch 5 | Batch 300/313 | Loss: 1.8091
+[2026-05-10 12:11:46] [baseline] [INFO]  Epoch   5/25 | Train Loss: 2.0262 Acc: 0.3592 F1: 0.2692 | Val Loss: 1.8723 Acc: 0.4056 F1: 0.3123 | Time: 232.6s
+[2026-05-10 12:12:03] [baseline] [DEBUG]  Epoch 6 | Batch 50/313 | Loss: 2.0644
+[2026-05-10 12:12:17] [baseline] [DEBUG]  Epoch 6 | Batch 100/313 | Loss: 1.8712
+[2026-05-10 12:12:33] [baseline] [DEBUG]  Epoch 6 | Batch 150/313 | Loss: 2.3159
+[2026-05-10 12:12:48] [baseline] [DEBUG]  Epoch 6 | Batch 200/313 | Loss: 2.4719
+[2026-05-10 12:13:03] [baseline] [DEBUG]  Epoch 6 | Batch 250/313 | Loss: 1.9785
+[2026-05-10 12:13:18] [baseline] [DEBUG]  Epoch 6 | Batch 300/313 | Loss: 2.8744
+[2026-05-10 12:15:39] [baseline] [INFO]  Epoch   6/25 | Train Loss: 2.0255 Acc: 0.3661 F1: 0.2739 | Val Loss: 1.8507 Acc: 0.4633 F1: 0.3244 | Time: 232.4s
+[2026-05-10 12:15:39] [baseline] [INFO]    ✓ Best model saved (val_f1=0.3244)
+[2026-05-10 12:15:55] [baseline] [DEBUG]  Epoch 7 | Batch 50/313 | Loss: 2.0144
+[2026-05-10 12:16:09] [baseline] [DEBUG]  Epoch 7 | Batch 100/313 | Loss: 2.0280
+[2026-05-10 12:16:25] [baseline] [DEBUG]  Epoch 7 | Batch 150/313 | Loss: 1.9338
+[2026-05-10 12:16:40] [baseline] [DEBUG]  Epoch 7 | Batch 200/313 | Loss: 2.1093
+[2026-05-10 12:16:55] [baseline] [DEBUG]  Epoch 7 | Batch 250/313 | Loss: 1.7620
+[2026-05-10 12:17:10] [baseline] [DEBUG]  Epoch 7 | Batch 300/313 | Loss: 2.1500
+[2026-05-10 12:19:30] [baseline] [INFO]  Epoch   7/25 | Train Loss: 2.0064 Acc: 0.3662 F1: 0.2743 | Val Loss: 1.8746 Acc: 0.3958 F1: 0.2927 | Time: 231.1s
+[2026-05-10 12:19:46] [baseline] [DEBUG]  Epoch 8 | Batch 50/313 | Loss: 2.2427
+[2026-05-10 12:20:00] [baseline] [DEBUG]  Epoch 8 | Batch 100/313 | Loss: 1.9974
+[2026-05-10 12:20:16] [baseline] [DEBUG]  Epoch 8 | Batch 150/313 | Loss: 1.7444
+[2026-05-10 12:20:31] [baseline] [DEBUG]  Epoch 8 | Batch 200/313 | Loss: 2.0987
+[2026-05-10 12:20:46] [baseline] [DEBUG]  Epoch 8 | Batch 250/313 | Loss: 1.9408
+[2026-05-10 12:21:01] [baseline] [DEBUG]  Epoch 8 | Batch 300/313 | Loss: 1.7614
+[2026-05-10 12:23:19] [baseline] [INFO]  Epoch   8/25 | Train Loss: 2.0270 Acc: 0.3627 F1: 0.2724 | Val Loss: 1.8740 Acc: 0.4476 F1: 0.3232 | Time: 228.7s
+[2026-05-10 12:23:35] [baseline] [DEBUG]  Epoch 9 | Batch 50/313 | Loss: 1.5013
+[2026-05-10 12:23:49] [baseline] [DEBUG]  Epoch 9 | Batch 100/313 | Loss: 2.5241
+[2026-05-10 12:24:05] [baseline] [DEBUG]  Epoch 9 | Batch 150/313 | Loss: 1.8977
+[2026-05-10 12:24:20] [baseline] [DEBUG]  Epoch 9 | Batch 200/313 | Loss: 1.6939
+[2026-05-10 12:24:35] [baseline] [DEBUG]  Epoch 9 | Batch 250/313 | Loss: 1.9018
+[2026-05-10 12:24:50] [baseline] [DEBUG]  Epoch 9 | Batch 300/313 | Loss: 1.7954
+[2026-05-10 12:27:10] [baseline] [INFO]  Epoch   9/25 | Train Loss: 2.0023 Acc: 0.3663 F1: 0.2748 | Val Loss: 1.8189 Acc: 0.4518 F1: 0.3258 | Time: 231.4s
+[2026-05-10 12:27:10] [baseline] [INFO]    ✓ Best model saved (val_f1=0.3258)
+[2026-05-10 12:27:26] [baseline] [DEBUG]  Epoch 10 | Batch 50/313 | Loss: 1.9112
+[2026-05-10 12:27:41] [baseline] [DEBUG]  Epoch 10 | Batch 100/313 | Loss: 1.9687
+[2026-05-10 12:27:56] [baseline] [DEBUG]  Epoch 10 | Batch 150/313 | Loss: 1.6295
+[2026-05-10 12:28:11] [baseline] [DEBUG]  Epoch 10 | Batch 200/313 | Loss: 2.1199
+[2026-05-10 12:28:27] [baseline] [DEBUG]  Epoch 10 | Batch 250/313 | Loss: 2.1585
+[2026-05-10 12:28:42] [baseline] [DEBUG]  Epoch 10 | Batch 300/313 | Loss: 1.5530
+[2026-05-10 12:31:02] [baseline] [INFO]  Epoch  10/25 | Train Loss: 1.9620 Acc: 0.3654 F1: 0.2747 | Val Loss: 1.8668 Acc: 0.4619 F1: 0.3480 | Time: 231.9s
+[2026-05-10 12:31:02] [baseline] [INFO]    ✓ Best model saved (val_f1=0.3480)
+[2026-05-10 12:31:18] [baseline] [DEBUG]  Epoch 11 | Batch 50/313 | Loss: 1.6845
+[2026-05-10 12:31:32] [baseline] [DEBUG]  Epoch 11 | Batch 100/313 | Loss: 1.7653
+[2026-05-10 12:31:48] [baseline] [DEBUG]  Epoch 11 | Batch 150/313 | Loss: 1.6992
+[2026-05-10 12:32:03] [baseline] [DEBUG]  Epoch 11 | Batch 200/313 | Loss: 1.9015
+[2026-05-10 12:32:18] [baseline] [DEBUG]  Epoch 11 | Batch 250/313 | Loss: 2.0038
+[2026-05-10 12:32:33] [baseline] [DEBUG]  Epoch 11 | Batch 300/313 | Loss: 1.9070
+[2026-05-10 12:34:53] [baseline] [INFO]  Epoch  11/25 | Train Loss: 2.0022 Acc: 0.3678 F1: 0.2786 | Val Loss: 1.8194 Acc: 0.4910 F1: 0.3539 | Time: 230.9s
+[2026-05-10 12:34:53] [baseline] [INFO]    ✓ Best model saved (val_f1=0.3539)
+[2026-05-10 12:35:09] [baseline] [DEBUG]  Epoch 12 | Batch 50/313 | Loss: 2.0307
+[2026-05-10 12:35:23] [baseline] [DEBUG]  Epoch 12 | Batch 100/313 | Loss: 1.8870
+[2026-05-10 12:35:39] [baseline] [DEBUG]  Epoch 12 | Batch 150/313 | Loss: 1.8024
+[2026-05-10 12:35:53] [baseline] [DEBUG]  Epoch 12 | Batch 200/313 | Loss: 1.9023
+[2026-05-10 12:36:09] [baseline] [DEBUG]  Epoch 12 | Batch 250/313 | Loss: 1.9798
+[2026-05-10 12:36:23] [baseline] [DEBUG]  Epoch 12 | Batch 300/313 | Loss: 2.1581
+[2026-05-10 12:38:42] [baseline] [INFO]  Epoch  12/25 | Train Loss: 1.9707 Acc: 0.3636 F1: 0.2739 | Val Loss: 1.8227 Acc: 0.4261 F1: 0.3316 | Time: 229.0s
+[2026-05-10 12:38:58] [baseline] [DEBUG]  Epoch 13 | Batch 50/313 | Loss: 2.1030
+[2026-05-10 12:39:13] [baseline] [DEBUG]  Epoch 13 | Batch 100/313 | Loss: 1.7782
+[2026-05-10 12:39:28] [baseline] [DEBUG]  Epoch 13 | Batch 150/313 | Loss: 1.7082
+[2026-05-10 12:39:43] [baseline] [DEBUG]  Epoch 13 | Batch 200/313 | Loss: 2.9974
+[2026-05-10 12:39:58] [baseline] [DEBUG]  Epoch 13 | Batch 250/313 | Loss: 2.1089
+[2026-05-10 12:40:13] [baseline] [DEBUG]  Epoch 13 | Batch 300/313 | Loss: 2.1404
+[2026-05-10 12:42:30] [baseline] [INFO]  Epoch  13/25 | Train Loss: 1.9606 Acc: 0.3633 F1: 0.2738 | Val Loss: 1.8097 Acc: 0.4937 F1: 0.3592 | Time: 228.2s
+[2026-05-10 12:42:30] [baseline] [INFO]    ✓ Best model saved (val_f1=0.3592)
+[2026-05-10 12:42:46] [baseline] [DEBUG]  Epoch 14 | Batch 50/313 | Loss: 2.6945
+[2026-05-10 12:43:01] [baseline] [DEBUG]  Epoch 14 | Batch 100/313 | Loss: 1.9564
+[2026-05-10 12:43:16] [baseline] [DEBUG]  Epoch 14 | Batch 150/313 | Loss: 2.0819
+[2026-05-10 12:43:30] [baseline] [DEBUG]  Epoch 14 | Batch 200/313 | Loss: 1.9938
+[2026-05-10 12:43:46] [baseline] [DEBUG]  Epoch 14 | Batch 250/313 | Loss: 2.1533
+[2026-05-10 12:44:00] [baseline] [DEBUG]  Epoch 14 | Batch 300/313 | Loss: 1.6414
+[2026-05-10 12:46:17] [baseline] [INFO]  Epoch  14/25 | Train Loss: 2.0218 Acc: 0.3610 F1: 0.2717 | Val Loss: 1.8008 Acc: 0.4511 F1: 0.3238 | Time: 227.0s
+[2026-05-10 12:46:33] [baseline] [DEBUG]  Epoch 15 | Batch 50/313 | Loss: 1.9647
+[2026-05-10 12:46:47] [baseline] [DEBUG]  Epoch 15 | Batch 100/313 | Loss: 1.6609
+[2026-05-10 12:47:02] [baseline] [DEBUG]  Epoch 15 | Batch 150/313 | Loss: 2.0894
+[2026-05-10 12:47:16] [baseline] [DEBUG]  Epoch 15 | Batch 200/313 | Loss: 1.9879
+[2026-05-10 12:47:31] [baseline] [DEBUG]  Epoch 15 | Batch 250/313 | Loss: 1.7005
+[2026-05-10 12:47:46] [baseline] [DEBUG]  Epoch 15 | Batch 300/313 | Loss: 1.6061
+[2026-05-10 12:50:04] [baseline] [INFO]  Epoch  15/25 | Train Loss: 1.9806 Acc: 0.3647 F1: 0.2777 | Val Loss: 1.8312 Acc: 0.4888 F1: 0.3581 | Time: 226.1s
+[2026-05-10 12:50:19] [baseline] [DEBUG]  Epoch 16 | Batch 50/313 | Loss: 1.9968
+[2026-05-10 12:50:34] [baseline] [DEBUG]  Epoch 16 | Batch 100/313 | Loss: 1.8092
+[2026-05-10 12:50:49] [baseline] [DEBUG]  Epoch 16 | Batch 150/313 | Loss: 1.9962
+[2026-05-10 12:51:03] [baseline] [DEBUG]  Epoch 16 | Batch 200/313 | Loss: 1.8112
+[2026-05-10 12:51:18] [baseline] [DEBUG]  Epoch 16 | Batch 250/313 | Loss: 1.9111
+[2026-05-10 12:51:33] [baseline] [DEBUG]  Epoch 16 | Batch 300/313 | Loss: 2.1715
+[2026-05-10 12:53:50] [baseline] [INFO]  Epoch  16/25 | Train Loss: 2.0252 Acc: 0.3609 F1: 0.2720 | Val Loss: 1.7967 Acc: 0.4647 F1: 0.3341 | Time: 226.8s
+[2026-05-10 12:54:06] [baseline] [DEBUG]  Epoch 17 | Batch 50/313 | Loss: 2.0712
+[2026-05-10 12:54:20] [baseline] [DEBUG]  Epoch 17 | Batch 100/313 | Loss: 2.6632
+[2026-05-10 12:54:35] [baseline] [DEBUG]  Epoch 17 | Batch 150/313 | Loss: 1.6600
+[2026-05-10 12:54:50] [baseline] [DEBUG]  Epoch 17 | Batch 200/313 | Loss: 2.3621
+[2026-05-10 12:55:05] [baseline] [DEBUG]  Epoch 17 | Batch 250/313 | Loss: 2.0743
+[2026-05-10 12:55:20] [baseline] [DEBUG]  Epoch 17 | Batch 300/313 | Loss: 2.1976
+[2026-05-10 12:57:37] [baseline] [INFO]  Epoch  17/25 | Train Loss: 1.9788 Acc: 0.3660 F1: 0.2772 | Val Loss: 1.7786 Acc: 0.4048 F1: 0.3216 | Time: 226.9s
+[2026-05-10 12:57:53] [baseline] [DEBUG]  Epoch 18 | Batch 50/313 | Loss: 1.9334
+[2026-05-10 12:58:07] [baseline] [DEBUG]  Epoch 18 | Batch 100/313 | Loss: 1.3204
+[2026-05-10 12:58:22] [baseline] [DEBUG]  Epoch 18 | Batch 150/313 | Loss: 1.8516
+[2026-05-10 12:58:37] [baseline] [DEBUG]  Epoch 18 | Batch 200/313 | Loss: 2.1569
+[2026-05-10 12:58:52] [baseline] [DEBUG]  Epoch 18 | Batch 250/313 | Loss: 1.9461
+[2026-05-10 12:59:06] [baseline] [DEBUG]  Epoch 18 | Batch 300/313 | Loss: 1.8435
+[2026-05-10 13:01:24] [baseline] [INFO]  Epoch  18/25 | Train Loss: 2.0049 Acc: 0.3678 F1: 0.2764 | Val Loss: 1.7940 Acc: 0.4331 F1: 0.3210 | Time: 226.9s
+[2026-05-10 13:01:24] [baseline] [INFO]  Early stopping at epoch 18 (no improvement for 5 epochs)
+[2026-05-10 13:01:24] [baseline] [INFO]  Training complete | Best epoch: 13 | Best val F1: 0.3592 | Total time: 70.8 min
+[2026-05-10 13:01:25] [baseline] [INFO]  Loading best checkpoint from outputs/checkpoints/best_model.pth
+[2026-05-10 13:01:25] [baseline] [INFO]  ============================================================
+[2026-05-10 13:01:25] [baseline] [INFO]  Running evaluation on test set — Baseline (ResNet-18)
+[2026-05-10 13:01:25] [baseline] [INFO]  ============================================================
+[2026-05-10 13:04:56] [baseline] [INFO]  Test samples: 54158
+[2026-05-10 13:04:57] [baseline] [INFO]  Accuracy: 0.4916 | Macro F1: 0.3599 | Weighted F1: 0.5002
+[2026-05-10 13:04:57] [baseline] [INFO]  Top-5 Accuracy: 0.8801
+[2026-05-10 13:04:57] [baseline] [INFO]  ROC-AUC (macro): 0.8608
+[2026-05-10 13:04:57] [baseline] [DEBUG]    short sleeve top               P=0.667 R=0.513 F1=0.580
+[2026-05-10 13:04:57] [baseline] [DEBUG]    long sleeve top                P=0.500 R=0.283 F1=0.361
+[2026-05-10 13:04:57] [baseline] [DEBUG]    short sleeve outwear           P=0.033 R=0.069 F1=0.044
+[2026-05-10 13:04:57] [baseline] [DEBUG]    long sleeve outwear            P=0.463 R=0.363 F1=0.407
+[2026-05-10 13:04:57] [baseline] [DEBUG]    vest                           P=0.261 R=0.550 F1=0.354
+[2026-05-10 13:04:57] [baseline] [DEBUG]    sling                          P=0.142 R=0.365 F1=0.204
+[2026-05-10 13:04:57] [baseline] [DEBUG]    shorts                         P=0.608 R=0.583 F1=0.595
+[2026-05-10 13:04:57] [baseline] [DEBUG]    trousers                       P=0.766 R=0.720 F1=0.742
+[2026-05-10 13:04:57] [baseline] [DEBUG]    skirt                          P=0.467 R=0.526 F1=0.495
+[2026-05-10 13:04:57] [baseline] [DEBUG]    short sleeve dress             P=0.244 R=0.166 F1=0.197
+[2026-05-10 13:04:57] [baseline] [DEBUG]    long sleeve dress              P=0.129 R=0.148 F1=0.138
+[2026-05-10 13:04:57] [baseline] [DEBUG]    vest dress                     P=0.248 R=0.520 F1=0.336
+[2026-05-10 13:04:57] [baseline] [DEBUG]    sling dress                    P=0.239 R=0.212 F1=0.224
+[2026-05-10 13:04:57] [baseline] [INFO]  Top confused pairs:
+[2026-05-10 13:04:57] [baseline] [INFO]    short sleeve top → vest: 1676 times
+[2026-05-10 13:04:57] [baseline] [INFO]    long sleeve top → short sleeve top: 1226 times
+[2026-05-10 13:04:57] [baseline] [INFO]    short sleeve dress → vest dress: 1082 times
+[2026-05-10 13:04:58] [baseline] [INFO]  Raw predictions saved.
+[2026-05-10 13:04:58] [baseline] [INFO]  Generating qualitative examples...
+[2026-05-10 13:05:00] [baseline] [INFO]  Generating Grad-CAM visualisations...
+[2026-05-10 13:05:01] [baseline] [INFO]  Evaluation complete.
+[2026-05-10 13:05:01] [baseline] [INFO]  ============================================================
+[2026-05-10 13:05:01] [baseline] [INFO]  BASELINE FINAL RESULTS
+[2026-05-10 13:05:01] [baseline] [INFO]    Accuracy:      0.4916
+[2026-05-10 13:05:01] [baseline] [INFO]    Macro F1:      0.3599
+[2026-05-10 13:05:01] [baseline] [INFO]    Weighted F1:   0.5002
+[2026-05-10 13:05:01] [baseline] [INFO]  ============================================================

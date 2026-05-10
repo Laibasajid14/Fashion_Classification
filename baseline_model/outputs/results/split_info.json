@@ -1,0 +1,9 @@
+{
+  "train_samples": 252733,
+  "val_samples": 54158,
+  "test_samples": 54158,
+  "random_seed": 42,
+  "train_ratio": 0.7,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15
+}

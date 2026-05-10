@@ -1,0 +1,5 @@
+{
+  "model": "resnet50_improved",
+  "total_params": 24563789,
+  "trainable_params": 1055757
+}

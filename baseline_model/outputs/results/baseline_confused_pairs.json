@@ -1,0 +1,17 @@
+[
+  {
+    "true_class": "short sleeve top",
+    "pred_class": "vest",
+    "count": 1676
+  },
+  {
+    "true_class": "long sleeve top",
+    "pred_class": "short sleeve top",
+    "count": 1226
+  },
+  {
+    "true_class": "short sleeve dress",
+    "pred_class": "vest dress",
+    "count": 1082
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "true_class": "short sleeve top",
+    "pred_class": "short sleeve outwear",
+    "count": 11102
+  },
+  {
+    "true_class": "trousers",
+    "pred_class": "short sleeve outwear",
+    "count": 1500
+  },
+  {
+    "true_class": "long sleeve top",
+    "pred_class": "short sleeve outwear",
+    "count": 1274
+  }
+]

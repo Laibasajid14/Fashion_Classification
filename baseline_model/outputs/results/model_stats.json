@@ -1,0 +1,5 @@
+{
+  "model": "resnet18_baseline",
+  "total_params": 11183181,
+  "trainable_params": 6669
+}
