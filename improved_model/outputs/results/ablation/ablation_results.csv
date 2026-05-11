@@ -1,0 +1,5 @@
+ablation,val_f1_macro
+A_full_finetune,0.6229
+B_cosine_schedule,0.6269
+C_label_smoothing,0.6026
+D_mixup,0.5992

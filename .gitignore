@@ -1,3 +1,6 @@
 # Ignore large model checkpoint files generated during training
 improved_model/outputs/checkpoints/best_model.pth
 baseline_model/outputs/checkpoints/best_model.pth
+
+# Ignore dataset folder
+DeepFashion2/

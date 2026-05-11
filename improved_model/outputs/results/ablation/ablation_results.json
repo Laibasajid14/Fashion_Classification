@@ -1,0 +1,38 @@
+{
+  "A_full_finetune": {
+    "config": {
+      "freeze_backbone": false,
+      "lr_scheduler": null,
+      "label_smoothing": 0.0,
+      "use_mixup": false
+    },
+    "val_f1_macro": 0.6229
+  },
+  "B_cosine_schedule": {
+    "config": {
+      "freeze_backbone": false,
+      "lr_scheduler": "cosine",
+      "label_smoothing": 0.0,
+      "use_mixup": false
+    },
+    "val_f1_macro": 0.6269
+  },
+  "C_label_smoothing": {
+    "config": {
+      "freeze_backbone": false,
+      "lr_scheduler": "cosine",
+      "label_smoothing": 0.1,
+      "use_mixup": false
+    },
+    "val_f1_macro": 0.6026
+  },
+  "D_mixup": {
+    "config": {
+      "freeze_backbone": false,
+      "lr_scheduler": "cosine",
+      "label_smoothing": 0.1,
+      "use_mixup": true
+    },
+    "val_f1_macro": 0.5992
+  }
+}

@@ -80,6 +80,37 @@ fashion_classification/
 
 ---
 
+## Key Results
+
+### Training Performance
+
+#### Baseline Model (ResNet-18)
+![Baseline Training Curves](baseline_model/outputs/plots/training_curves.png)
+
+#### Improved Model (ResNet-50)
+![Improved Training Curves](improved_model/outputs/plots/training_curves.png)
+
+#### Model Comparison
+![Metrics Comparison](comparison/outputs/metrics_comparison.png)
+
+### Confusion Matrices
+
+#### Baseline Model
+![Baseline Confusion Matrix](baseline_model/outputs/plots/confusion_matrix_test.png)
+
+#### Improved Model
+![Improved Confusion Matrix](improved_model/outputs/plots/confusion_matrix_test.png)
+
+### Qualitative Analysis
+
+#### Baseline Model True Positives
+![Baseline True Positives](baseline_model/outputs/qualitative/true_positives.png)
+
+#### Baseline Model False Positives
+![Baseline False Positives](baseline_model/outputs/qualitative/false_positives.png)
+
+---
+
 ## Setup
 
 ### Option A — Local (conda)
