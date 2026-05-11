@@ -84,30 +84,45 @@ fashion_classification/
 
 ### Training Performance
 
-#### Baseline Model (ResNet-18)
-![Baseline Training Curves](baseline_model/outputs/plots/training_curves.png)
-
-#### Improved Model (ResNet-50)
-![Improved Training Curves](improved_model/outputs/plots/training_curves.png)
+<table>
+<tr>
+<td><img src="baseline_model/outputs/plots/training_curves.png" width="400" alt="Baseline Training Curves"></td>
+<td><img src="improved_model/outputs/plots/training_curves.png" width="400" alt="Improved Training Curves"></td>
+</tr>
+<tr>
+<td align="center"><b>Baseline Model (ResNet-18)</b></td>
+<td align="center"><b>Improved Model (ResNet-50)</b></td>
+</tr>
+</table>
 
 #### Model Comparison
-![Metrics Comparison](comparison/outputs/metrics_comparison.png)
+<img src="comparison/outputs/metrics_comparison.png" width="600" alt="Metrics Comparison">
 
 ### Confusion Matrices
 
-#### Baseline Model
-![Baseline Confusion Matrix](baseline_model/outputs/plots/confusion_matrix_test.png)
-
-#### Improved Model
-![Improved Confusion Matrix](improved_model/outputs/plots/confusion_matrix_test.png)
+<table>
+<tr>
+<td><img src="baseline_model/outputs/plots/confusion_matrix_test.png" width="400" alt="Baseline Confusion Matrix"></td>
+<td><img src="improved_model/outputs/plots/confusion_matrix_test.png" width="400" alt="Improved Confusion Matrix"></td>
+</tr>
+<tr>
+<td align="center"><b>Baseline Model</b></td>
+<td align="center"><b>Improved Model</b></td>
+</tr>
+</table>
 
 ### Qualitative Analysis
 
-#### Baseline Model True Positives
-![Baseline True Positives](baseline_model/outputs/qualitative/true_positives.png)
-
-#### Baseline Model False Positives
-![Baseline False Positives](baseline_model/outputs/qualitative/false_positives.png)
+<table>
+<tr>
+<td><img src="baseline_model/outputs/qualitative/true_positives.png" width="400" alt="True Positives"></td>
+<td><img src="baseline_model/outputs/qualitative/false_positives.png" width="400" alt="False Positives"></td>
+</tr>
+<tr>
+<td align="center"><b>True Positives</b></td>
+<td align="center"><b>False Positives</b></td>
+</tr>
+</table>
 
 ---
 
@@ -264,22 +279,6 @@ Lightweight, interpretable, fast to train. Provides a clear performance floor. F
 
 ---
 
-## Outputs Reference (for report writing)
-
-| File | Used in report section |
-|------|----------------------|
-| `*/results/*_metrics.json` | Table 1: Quantitative results |
-| `*/results/*_per_class_metrics.csv` | Table 2: Per-class metrics |
-| `*/plots/training_curves.png` | Figure: Training curves |
-| `*/plots/confusion_matrix_test.png` | Figure: Confusion matrix |
-| `*/results/*_confused_pairs.json` | Section: Error analysis |
-| `*/qualitative/*.png` | Figure: TP/FP/FN/Hard cases |
-| `*/gradcam/*.png` | Figure: Grad-CAM |
-| `comparison/outputs/*.png` | Figure: Model comparison |
-| `*/results/ablation/ablation_results.csv` | Table: Ablation study |
-| `*/results/hparam_search/hp_search_results.csv` | Table: HP search |
-
----
 
 ## Citation
 
