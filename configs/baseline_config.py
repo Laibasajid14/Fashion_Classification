@@ -36,17 +36,17 @@ AUGMENTATIONS = [
     "random_rotation",          # degrees=15
 ]
 
-# ── Output paths (relative to baseline_model/) ────────────────────────────────
-OUTPUT_DIR        = "outputs"
-CHECKPOINT_DIR    = "outputs/checkpoints"
-PLOTS_DIR         = "outputs/plots"
-RESULTS_DIR       = "outputs/results"
-LOGS_DIR          = "outputs/logs"
-QUALITATIVE_DIR   = "outputs/qualitative"
-GRADCAM_DIR       = "outputs/gradcam"
+# ── Output paths (relative to project root) ────────────────────────────────
+OUTPUT_DIR        = "baseline_model/outputs"
+CHECKPOINT_DIR    = "baseline_model/outputs/checkpoints"
+PLOTS_DIR         = "baseline_model/outputs/plots"
+RESULTS_DIR       = "baseline_model/outputs/results"
+LOGS_DIR          = "baseline_model/outputs/logs"
+QUALITATIVE_DIR   = "baseline_model/outputs/qualitative"
+GRADCAM_DIR       = "baseline_model/outputs/gradcam"
 
-BEST_MODEL_PATH   = "outputs/checkpoints/best_model.pth"
-FINAL_MODEL_PATH  = "outputs/checkpoints/final_model.pth"
+BEST_MODEL_PATH   = "baseline_model/outputs/checkpoints/best_model.pth"
+FINAL_MODEL_PATH  = "baseline_model/outputs/checkpoints/final_model.pth"
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 LOG_INTERVAL = 50    # log every N batches

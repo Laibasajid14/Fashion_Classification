@@ -4,3 +4,6 @@ baseline_model/outputs/checkpoints/best_model.pth
 
 # Ignore dataset folder
 DeepFashion2/
+
+
+__pycache__/

@@ -89,17 +89,17 @@ ABLATIONS = {
     "D_mixup":              {"freeze_backbone": False, "lr_scheduler": "cosine", "label_smoothing": 0.1, "use_mixup": True},
 }
 
-# ── Output paths (relative to improved_model/) ────────────────────────────────
-OUTPUT_DIR        = "outputs"
-CHECKPOINT_DIR    = "outputs/checkpoints"
-PLOTS_DIR         = "outputs/plots"
-RESULTS_DIR       = "outputs/results"
-LOGS_DIR          = "outputs/logs"
-QUALITATIVE_DIR   = "outputs/qualitative"
-GRADCAM_DIR       = "outputs/gradcam"
-ABLATION_DIR      = "outputs/ablation"
+# ── Output paths (relative to project root) ────────────────────────────────
+OUTPUT_DIR        = "improved_model/outputs"
+CHECKPOINT_DIR    = "improved_model/outputs/checkpoints"
+PLOTS_DIR         = "improved_model/outputs/plots"
+RESULTS_DIR       = "improved_model/outputs/results"
+LOGS_DIR          = "improved_model/outputs/logs"
+QUALITATIVE_DIR   = "improved_model/outputs/qualitative"
+GRADCAM_DIR       = "improved_model/outputs/gradcam"
+ABLATION_DIR      = "improved_model/outputs/ablation"
 
-BEST_MODEL_PATH   = "outputs/checkpoints/best_model.pth"
-FINAL_MODEL_PATH  = "outputs/checkpoints/final_model.pth"
+BEST_MODEL_PATH   = "improved_model/outputs/checkpoints/best_model.pth"
+FINAL_MODEL_PATH  = "improved_model/outputs/checkpoints/final_model.pth"
 
 LOG_INTERVAL = 50

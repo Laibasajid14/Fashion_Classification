@@ -1,4 +1,4 @@
-# Clothing Classification System — DeepFashion2
+# Clothing Classification System: DeepFashion2
 
 Computer Vision Milestone 2 · ResNet-18 Baseline vs ResNet-50 Improved
 
@@ -128,7 +128,7 @@ fashion_classification/
 
 ## Setup
 
-### Option A — Local (conda)
+### Option A: Local (conda)
 
 ```bash
 # 1. Clone / download the project
@@ -141,7 +141,7 @@ conda activate fashion_cv
 # 3. Edit DATA_ROOT in configs/dataset_config.py to point to your local dataset
 ```
 
-### Option B — Kaggle (T4 GPU, recommended)
+### Option B: Kaggle (T4 GPU, recommended)
 
 The Kaggle notebook already has PyTorch + CUDA. Just install extra deps:
 
@@ -160,7 +160,7 @@ Add it to your Kaggle notebook via the "Add Data" button. The default `DATA_ROOT
 
 ## Training & Evaluation
 
-### Step 1 — Train and evaluate the baseline model
+### Step 1: Train and evaluate the baseline model
 
 ```bash
 cd baseline_model
@@ -186,7 +186,7 @@ python run_baseline.py
 
 ---
 
-### Step 2 — Train and evaluate the improved model
+### Step 2: Train and evaluate the improved model
 
 ```bash
 cd improved_model
@@ -206,7 +206,7 @@ python run_improved.py
 
 ---
 
-### Step 3 — Generate comparison plots
+### Step 3: Generate comparison plots
 
 ```bash
 cd ..   # project root
@@ -221,7 +221,7 @@ Run this **after** both models are fully evaluated. Produces:
 
 ---
 
-### Step 4 — Launch the UI
+### Step 4: Launch the UI
 
 ```bash
 python ui/app.py

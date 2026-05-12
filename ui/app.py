@@ -18,6 +18,7 @@ Both model checkpoints must exist:
 
 import sys
 import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 
 import io
@@ -55,7 +56,7 @@ def _load_model(build_fn, checkpoint_path, device):
             "  Baseline:  cd baseline_model && python run_baseline.py\n"
             "  Improved:  cd improved_model && python run_improved.py"
         )
-    ckpt = torch.load(checkpoint_path, map_location=device)
+    ckpt = torch.load(checkpoint_path, map_location=device, weights_only=False)
     model.load_state_dict(ckpt["model_state"])
     model.eval().to(device)
     return model
@@ -303,14 +304,14 @@ body, .gradio-container { font-family: "Inter", "Segoe UI", sans-serif; }
 }
 """
 
-with gr.Blocks(css=CSS, title="Fashion Classifier — DeepFashion2") as demo:
+with gr.Blocks(title="Fashion Classifier: DeepFashion2") as demo:
 
     # ── Header ─────────────────────────────────────────────────────────────────
-    gr.HTML('<div id="app-title">👗 Clothing Classification — Model Comparison</div>')
+    gr.HTML('<div id="app-title">Clothing Classification: Model Comparison</div>')
     gr.HTML(
         '<div id="app-sub">'
         "Upload a fashion image · compare <b>ResNet-18 Baseline</b> vs <b>ResNet-50 Improved</b><br>"
-        "Top-5 confidence scores &nbsp;+&nbsp; Grad-CAM attention maps — side by side"
+        "Top-5 confidence scores &nbsp;+&nbsp; Grad-CAM attention maps, side by side"
         "</div>"
     )
 
@@ -327,9 +328,9 @@ with gr.Blocks(css=CSS, title="Fashion Classifier — DeepFashion2") as demo:
                 "<div style='padding:16px 18px; background:#eef2ff; border-radius:9px;"
                 " border-left:4px solid #4C72B0; font-size:0.87rem; color:#333; line-height:1.7;'>"
                 "<b>How to use</b><br>"
-                "① Upload a JPEG or PNG fashion photo.<br>"
-                "② <b>Top-5 Predictions</b> — confidence bars appear instantly for each model.<br>"
-                "③ <b>Grad-CAM</b> — heatmaps reveal which regions drove each model's decision.<br>"
+                "1. Upload a JPEG or PNG fashion photo.<br>"
+                "2. <b>Top-5 Predictions</b>: confidence bars appear instantly for each model.<br>"
+                "3. <b>Grad-CAM</b>: heatmaps reveal which regions drove each model's decision.<br>"
                 "&nbsp;&nbsp;&nbsp;&nbsp;"
                 "<span style='color:#c0392b'>■</span> Warm/red = high activation &nbsp;"
                 "<span style='color:#2980b9'>■</span> Cool/blue = low activation<br><br>"
@@ -339,25 +340,25 @@ with gr.Blocks(css=CSS, title="Fashion Classifier — DeepFashion2") as demo:
             )
 
     # ── Section 1 — Top-5 Predictions ──────────────────────────────────────────
-    gr.HTML('<hr class="divider"><div class="sec-head">📊 Top-5 Predictions</div>')
+    gr.HTML('<hr class="divider"><div class="sec-head">Top-5 Predictions</div>')
 
     with gr.Row(equal_height=True):
         with gr.Column(elem_classes=["card", "card-blue"]):
             gr.HTML(
-                '<div class="mname mname-blue">Baseline — ResNet-18</div>'
+                '<div class="mname mname-blue">Baseline: ResNet-18</div>'
                 '<div class="mdesc">Frozen backbone · fixed LR · CrossEntropy · single-layer head</div>'
             )
             baseline_label = gr.Label(num_top_classes=5, label="Top-5 confidence")
 
         with gr.Column(elem_classes=["card", "card-orange"]):
             gr.HTML(
-                '<div class="mname mname-orange">Improved — ResNet-50</div>'
+                '<div class="mname mname-orange">Improved: ResNet-50</div>'
                 '<div class="mdesc">Full fine-tuning · cosine LR · label smoothing (ε=0.1) · mixup</div>'
             )
             improved_label = gr.Label(num_top_classes=5, label="Top-5 confidence")
 
     # ── Section 2 — Grad-CAM ───────────────────────────────────────────────────
-    gr.HTML('<hr class="divider"><div class="sec-head">🔍 Grad-CAM Attention Maps</div>')
+    gr.HTML('<hr class="divider"><div class="sec-head">Grad-CAM Attention Maps</div>')
     gr.HTML(
         "<div style='font-size:0.83rem; color:#666; margin-bottom:12px; line-height:1.6;'>"
         "Grad-CAM (Gradient-weighted Class Activation Mapping) uses gradients flowing into the "
@@ -370,26 +371,24 @@ with gr.Blocks(css=CSS, title="Fashion Classifier — DeepFashion2") as demo:
     with gr.Row(equal_height=True):
         with gr.Column(elem_classes=["card", "card-blue"]):
             gr.HTML(
-                '<div class="mname mname-blue">Baseline — ResNet-18</div>'
+                '<div class="mname mname-blue">Baseline: ResNet-18</div>'
                 '<div class="mdesc">Grad-CAM on layer4[-1] · jet colormap · α = 0.45</div>'
             )
             baseline_cam = gr.Image(
                 type="pil",
-                label="Grad-CAM — Baseline ResNet-18",
+                label="Grad-CAM: Baseline ResNet-18",
                 height=340,
-                show_download_button=True,
             )
 
         with gr.Column(elem_classes=["card", "card-orange"]):
             gr.HTML(
-                '<div class="mname mname-orange">Improved — ResNet-50</div>'
+                '<div class="mname mname-orange">Improved: ResNet-50</div>'
                 '<div class="mdesc">Grad-CAM on layer4[-1] · jet colormap · α = 0.45</div>'
             )
             improved_cam = gr.Image(
                 type="pil",
-                label="Grad-CAM — Improved ResNet-50",
+                label="Grad-CAM: Improved ResNet-50",
                 height=340,
-                show_download_button=True,
             )
 
     # ── Wire event ─────────────────────────────────────────────────────────────
@@ -412,6 +411,7 @@ with gr.Blocks(css=CSS, title="Fashion Classifier — DeepFashion2") as demo:
 
 if __name__ == "__main__":
     demo.launch(
+        css=CSS,
         server_name="0.0.0.0",
         server_port=7860,
         share=False,       # set True for a public Gradio tunnel link (useful on Kaggle)
